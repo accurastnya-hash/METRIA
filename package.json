@@ -1,0 +1,44 @@
+{
+  "name": "metria-meteora",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:unit": "vitest run --exclude tests/live-mainnet.test.ts",
+    "test:live": "vitest run tests/live-mainnet.test.ts",
+    "typecheck": "tsc --noEmit",
+    "docs:check": "node scripts/check-doc-links.mjs",
+    "audit:gate": "node scripts/audit-gate.mjs"
+  },
+  "dependencies": {
+    "@meteora-ag/cp-amm-sdk": "^1.5.1",
+    "@meteora-ag/dynamic-bonding-curve-sdk": "^1.5.13",
+    "@solana/web3.js": "^1.99.0",
+    "lucide-react": "^1.54.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "toml": "^4.2.0",
+    "bigint-buffer": "npm:@exodus/bigint-buffer@1.1.5-exodus.1",
+    "jayson": "5.0.0"
+  }
+}
